@@ -1,0 +1,340 @@
+:root {
+    --primary-color: #FF6B9D;
+    --secondary-color: #FFA502;
+    --accent-color: #26D0FF;
+    --light-bg: #FFF5E1;
+    --shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: slideDown 0.8s ease-out;
+}
+
+.title {
+    font-size: 3.5rem;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: #FFE5E5;
+    font-style: italic;
+}
+
+.scrapbook {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.6s ease-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card:active {
+    transform: scale(0.98);
+}
+
+.card-1 {
+    border-top: 5px solid #FF6B9D;
+    animation-delay: 0.1s;
+}
+
+.card-2 {
+    border-top: 5px solid #FFA502;
+    animation-delay: 0.2s;
+}
+
+.card-3 {
+    border-top: 5px solid #26D0FF;
+    animation-delay: 0.3s;
+}
+
+.card-4 {
+    border-top: 5px solid #FF1654;
+    animation-delay: 0.4s;
+}
+
+.card-5 {
+    border-top: 5px solid #FFD700;
+    animation-delay: 0.5s;
+}
+
+.card-6 {
+    border-top: 5px solid #00D084;
+    animation-delay: 0.6s;
+}
+
+.card-header {
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.message {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.sender {
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+    font-size: 1.05rem;
+}
+
+/* Gallery Section */
+.gallery-section {
+    margin-bottom: 60px;
+    animation: fadeInUp 0.6s ease-out 0.7s both;
+}
+
+.gallery-section h2 {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.gallery-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.gallery-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.gallery-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-placeholder {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+    animation: fadeIn 1s ease-out 0.7s both;
+}
+
+.footer p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.date {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Balloon Animation */
+.balloon {
+    position: fixed;
+    bottom: -100px;
+    width: 50px;
+    height: 60px;
+    border-radius: 50% 50% 50% 0;
+    opacity: 0.8;
+    animation: float 15s infinite ease-in;
+    z-index: 0;
+}
+
+.balloon:nth-child(1) {
+    background: #FF6B9D;
+    animation-delay: 0s;
+}
+
+.balloon:nth-child(2) {
+    background: #FFA502;
+    animation-delay: 2s;
+}
+
+.balloon:nth-child(3) {
+    background: #26D0FF;
+    animation-delay: 4s;
+}
+
+.balloon:nth-child(4) {
+    background: #FF1654;
+    animation-delay: 1s;
+}
+
+.balloon:nth-child(5) {
+    background: #FFD700;
+    animation-delay: 3s;
+}
+
+.balloon:nth-child(6) {
+    background: #00D084;
+    animation-delay: 5s;
+}
+
+/* Animations */
+@keyframes float {
+    to {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .scrapbook {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .message {
+        font-size: 0.95rem;
+    }
+
+    .gallery-section h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .card-header {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .card-content {
+        padding: 15px;
+    }
+
+    .message {
+        font-size: 0.9rem;
+    }
+
+    .gallery-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-placeholder {
+        height: 150px;
+        font-size: 1.5rem;
+    }
+}
